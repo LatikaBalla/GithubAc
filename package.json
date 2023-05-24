@@ -4,16 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-     "build": "rollup -c",
-    "start": "http-server",
-    "test": "cypress run",
-    "cypress:open": "cypress open",
-    "cypress:run": "cypress run",
-    "cypress:record": "cypress run --record --key"
+    "ui-regression": "cypress run --browser chrome --spec cypress/e2e/1-getting-started/**.js"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^12.13.0"
+    "cypress": "^12.13.0",
+    "cypress-mochawesome-reporter": "^3.5.0"
   }
 }
