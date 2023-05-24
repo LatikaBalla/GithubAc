@@ -11,13 +11,13 @@ jobs:
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
-        uses: cypress-io/github-action@v2
+        uses: cypress-io/github-action@v3
         with:
           command: npm run ui-regression
       - name: Uploading artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         if: always()
         with: 
             name: cypress-execution-report
-            path: cypress/report/html
+            path: cypress/report/*.html
             retention-days: 30
